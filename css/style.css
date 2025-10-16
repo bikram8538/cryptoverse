@@ -1,0 +1,1115 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* 
+    font-family: "Outfit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Arca Majora Bold", sans-serif;
+
+
+*/
+/* font-weight: 100;  Thin                          */
+/* font-weight: 200;  Extra Light                   */
+/* font-weight: 300;  Light                         */
+/* font-weight: 400;  Regular Normal (default)      */
+/* font-weight: 500;  Medium                        */
+/* font-weight: 600;  Semi Bold                    */
+/* font-weight: 700;  Bold                         */
+/* font-weight: 800;  Extra Bold                   */
+/* font-weight: 900;  Black                        */
+
+@font-face {
+  font-family: "Arca Majora Bold", sans-serif;
+  src: url("../fonts/arca-majora/ArcaMajora3-Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  /* Regualr */
+  color: #e2e2e2;
+  background-color: #02171d;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #e2e2e2;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  padding: 0 15px;
+}
+
+.col-20 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.col-25 {
+  flex: 0 0 25%;
+  width: 25%;
+}
+.col-33 {
+  flex: 0 0 33%;
+  max-width: 33%;
+}
+
+.col-40 {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.col-45 {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.col-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.col-55 {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+
+.col-60 {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.b {
+  border: 1px solid white;
+}
+
+/* ----------------- Navbar */
+.navbar {
+  position: relative;
+  padding: 13px 4px;
+  height: 60px;
+}
+
+nav,
+.navList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo a {
+  width: 227px;
+}
+
+.navList li {
+  margin-right: 60px;
+}
+
+.navList li:last-child {
+  margin-right: 0px;
+}
+
+.navList li a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.navList li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #f8a501;
+  transition: width 0.3s ease;
+}
+
+.navList li a:hover {
+  color: #f8a501;
+}
+
+.navList li a:hover::after {
+  width: 100%;
+}
+
+.navButton {
+  padding: 18px 38px;
+  border-radius: 60px;
+  border: 2px solid #088b7e;
+  transition: background-color 0.3s ease-in, color 0.3s ease-out;
+}
+
+.navButton:hover {
+  background-color: #f8a501;
+  color: #fff;
+}
+
+.navToogler {
+  font-size: 35px;
+  color: #f8a501;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+}
+#navMenublock {
+  display: none;
+  /* position: absolute; */
+  top: 100px;
+  max-height: 0;
+  right: 32px;
+  margin-top: 16px;
+  background-color: #a1eb001a;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  /* transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  transition: max-height 0.4s ease;
+}
+#navMenublock.open {
+  max-height: 400px;
+}
+#navMenublock li{
+  padding: 20px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------------------- Banner */
+.banner {
+  height: calc(100vh - 60px);
+}
+
+.banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  max-width: 630px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+h1 span {
+  color: #04dfbf;
+}
+
+.bannerContent p {
+  font-weight: 500;
+  max-width: 536px;
+  width: 100%;
+  color: #c2c2c2;
+  margin-bottom: 50px;
+}
+
+.bannerButton a:nth-of-type(1),
+.btn {
+  padding: 24px 47px;
+  background-color: #f8a501;
+  color: #ffffff;
+  border-radius: 60px;
+  margin-right: 16px;
+  transition: all 0.3s ease;
+}
+
+.bannerButton a:nth-of-type(1):hover,
+.btn:hover {
+  background-color: #e09700;
+  transform: scale(1.05);
+}
+
+.bannerButton a:nth-of-type(2) {
+  padding: 24px 30px 24px 10px;
+  border-radius: 60px;
+  color: #e2e2e2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bannerButton a:nth-of-type(2) span {
+  color: #04dfbf;
+  padding: 15px 15px 15px 17px;
+  border: 2px solid #04dfbf;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+.bannerButton a:nth-of-type(2) hover:span {
+  background-color: #04dfbf;
+  color: #fff;
+  box-shadow: 0 0 12px #04dfbf;
+  transform: scale(1.2);
+}
+
+.bannerButton a:nth-of-type(2):hover {
+  transform: scale(1.05);
+}
+
+.bannerImage figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------ companies */
+/* .companies {
+    padding: 5% 2%;
+} */
+
+.companies .row {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.companies .row .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.companies figure {
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* ------------------------- feature glow */
+
+.featureCardrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.featureCard {
+  padding: 47px 25px 50px 25px;
+  background-color: #042832;
+  border: 8px;
+  margin: 16px;
+  border-radius: 8px;
+}
+
+.featureCard figure {
+  width: 70px;
+  margin-bottom: 36px;
+}
+
+.featureCardContent {
+  max-width: 265px;
+  width: 100%;
+}
+
+.featureCardContent h3 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 27px;
+  color: #e2e2e2;
+  margin-bottom: 26px;
+}
+
+.featureCardContent p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #c2c2c2;
+}
+
+.section-content span {
+  display: block;
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #04dfbf;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.feature .section-content span {
+  padding-left: 66px;
+}
+
+.feature .section-content span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 59px;
+  height: 1px;
+  background-color: #04dfbf;
+}
+
+h2 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  max-width: 490px;
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.section-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #c2c2c2;
+  max-width: 560px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.section-content .btn {
+  margin-top: 22px;
+}
+
+/* ----------------------- live-price  */
+.live-price .section-content span {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+/* , .live-price .section-content span::before */
+/* .live-price .section-content span::after {
+ content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 59px;
+    height: 1px;
+    background-color: #04DFBF;
+} */
+
+.live-price .section-content h2 {
+  text-align: center;
+  max-width: 100%;
+}
+
+.live-price .section-content p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ------- crypto-card */
+
+/* Plaid background */
+.price-card {
+  padding: 7% 4% 10%;
+  /* padding: 34px 20px 48px; */
+  background-color: #042832;
+  border-radius: 8px;
+}
+
+/* Logo and name section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.crypto-name {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e2e2;
+}
+
+/* Data section */
+.data-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.data-item {
+  text-align: center;
+}
+
+.data-item label {
+  display: block;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #e2e2e2;
+  margin-bottom: 24px;
+}
+
+.data-item span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-item .value {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #c2c2c2;
+}
+
+.positive {
+  color: #00cc00;
+}
+
+.negative {
+  color: #ff0000;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.crypto-live-prices {
+  margin-top: 56px;
+}
+
+.crypto-live-prices .row {
+  margin-bottom: 32px;
+}
+
+.live-price-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-price-btn .btn {
+  background-color: #04dfbf0d;
+  color: #04dfbf;
+}
+
+/* --------------- why-choose-us */
+
+.choose-us-card {
+  display: flex;
+  align-items: center;
+}
+
+.choose-us-card figure {
+  width: 80px;
+  height: 80px;
+  margin-right: 32px;
+}
+
+.choose-us-card-content {
+  max-width: 455px;
+  width: 100%;
+}
+
+.choose-us-card h3 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.choose-us-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #c2c2c2;
+}
+
+.why-choose-us .choose-us-card:nth-child(2) {
+  margin-bottom: 52px;
+}
+.why-choose-us .section-side-figure {
+  width: 90%;
+
+  filter: drop-shadow(0px 428px 120px rgba(4, 223, 191, 0))
+    drop-shadow(0px 274px 109px rgba(4, 223, 191, 0.03))
+    drop-shadow(0px 154px 92px rgba(4, 223, 191, 0.11))
+    drop-shadow(0px 68px 68px rgba(4, 223, 191, 0.19))
+    drop-shadow(0px 17px 38px rgba(4, 223, 191, 0.22));
+}
+/* -----------crypto-exchange */
+
+.crypto-exchange .section-content h2 {
+  max-width: 550px;
+}
+
+.purchase-crypto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 548px;
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #042832;
+  padding: 17px;
+  border-radius: 8px;
+  width: 77%;
+  margin-right: 25px;
+}
+
+.input-box label {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #c2c2c2;
+  white-space: nowrap;
+}
+
+.input-box .divider {
+  width: 1px;
+  height: 30px;
+  background-color: #c2c2c2;
+  margin: 0 10px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 13px;
+  color: #c2c2c2;
+}
+
+.purchase-crypto a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.purchase-crypto span {
+  overflow: hidden;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.purchase-crypto-btn {
+  padding: 12px 69px 12px 16px;
+  background-color: #042832;
+  border-radius: 8px;
+}
+
+.crypto-exchange .purchase-crypto:nth-child(2) {
+  margin-bottom: 25px;
+}
+
+.crypto-exchange-btn {
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.crypto-exchange-btn .btn {
+  margin-top: 48px;
+  width: 100%;
+  background-color: #04dfbf;
+  color: #ffffff;
+}
+.crypto-exchange .section-side-figure {
+  /* height: 100%; */
+  width: 90%;
+  filter: drop-shadow(0px 428px 120px rgba(4, 223, 191, 0))
+    drop-shadow(0px 274px 109px rgba(4, 223, 191, 0.03))
+    drop-shadow(0px 154px 92px rgba(4, 223, 191, 0.11))
+    drop-shadow(0px 68px 68px rgba(4, 223, 191, 0.19))
+    drop-shadow(0px 17px 38px rgba(4, 223, 191, 0.22));
+}
+
+/* --------------------- special-offer */
+
+.special-offer {
+  background-image: url("../images/special-offer/background-blur.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.section-content h2 span {
+  display: inline;
+  font-size: 45px;
+  color: #f8a501;
+}
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+.timerBox {
+  background-color: #0e413e;
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+.timerBox span {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.timerBox span:nth-child(1) {
+  font-weight: 700;
+  font-size: 30px;
+  color: #e2e2e2;
+}
+.timerBox span:nth-child(2) {
+  font-weight: 400;
+  font-size: 15px;
+  color: #c2c2c2;
+}
+
+.special-offer .section-side-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------ review */
+.review h2 {
+  margin-bottom: 112px;
+}
+.review .row {
+  justify-content: space-between;
+}
+/* Target the paragraph inside the .col.col-33 class */
+.reviewCardMain {
+  position: relative;
+  padding: 180px 20px 45px;
+  background-color: #042832;
+  border-radius: 8px;
+  position: relative;
+}
+
+.reviewCardMain::before {
+  content: url("../images/reviews/quote.png");
+  color: red;
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translateX(-50%);
+  font-size: 100px;
+}
+
+.review p {
+  padding: 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  color: #c2c2c2;
+  margin-bottom: 66px;
+}
+.client-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.client-card figure {
+  height: 72px;
+  width: 72px;
+}
+.client-details span {
+  display: block;
+  padding: 4px;
+}
+.client-details span:nth-child(1) {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 17px;
+  color: #e2e2e2;
+}
+.client-details span:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #c2c2c2;
+}
+.team .section-content {
+  text-align: center;
+}
+.team .section-content h2,
+.team .section-content p {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* -------------------- our-motivated-team */
+.our-motivated-team .section-content {
+  text-align: center;
+}
+.our-motivated-team .section-content h2,
+.our-motivated-team .section-content p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teamCard {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 21px;
+  background-color: #042832;
+  padding: 45px 30px;
+  margin-top: 32px;
+  border-radius: 8px;
+}
+.team-socials {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.team-mem-details h3 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.team-mem-details p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #c2c2c2;
+  margin-bottom: 5px;
+}
+.team-socials li a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #c2c2c2;
+}
+.team-socials hr {
+  height: 10px;
+}
+.our-motivated-team .btn {
+  background-color: #0a3d4b66;
+  color: #f8a501;
+}
+.more-team-btn {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------- mobile-app */
+.mobile-app .container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(36px);
+  -webkit-backdrop-filter: blur(36px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 73px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.mobile-app .section-content h2 {
+  max-width: 100%;
+}
+.mobile-app .section-content .btn {
+  margin-top: 0;
+}
+
+.mobile-app-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-app-figure img {
+  height: auto;
+  object-fit: cover;
+}
+
+/* blur-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: #415332;
+  border-radius: 50%;
+  filter: blur(413.7px);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+} */
+
+/* ----------------- blog */
+.blog .section-content h2 {
+  max-width: 100%;
+  text-align: center;
+}
+.blog .section-content p {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 90px;
+}
+.blogCard {
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 32px;
+}
+.blogCard h3 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 22px;
+  max-width: 326px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.blogCard .main-blog-figure {
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogCard .main-blog-figure img {
+  object-fit: contain;
+}
+.blogCard p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #c2c2c2;
+  margin-bottom: 24px;
+}
+.blog-writer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.blog-writer figure {
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  width: 62px;
+}
+.blog-writer-details {
+  flex-grow: 1;
+}
+.blog-writer-details h4,
+.blog-writer-details p {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 12px;
+}
+.blog-writer-details h4 {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+.blog-writer-details p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #c2c2c2;
+}
+.blog-writer span {
+  flex-grow: 0;
+}
+.blog-writer span a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  background-color: #0a3d4b;
+  border-radius: 50%;
+}
+.blog-writer span i {
+  color: #04dfbf;
+}
+/* ------------------start-trading */
+
+.start-trading {
+  opacity: 1;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 10% solid transparent;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+}
+.start-trading .section-content h2 {
+  max-width: 100%;
+  text-align: center;
+}
+.start-trading .section-content P {
+  text-align: center;
+  margin: 0 auto;
+}
+.section-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-trading .btn {
+  margin-top: 39px;
+  background-color: #04dfbf;
+}
+
+/* --------footer */
+
+.left-footer-top {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+.footer-img {
+  max-width: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links li a {
+  display: flex;
+  /* align-items: center; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #c2c2c2;
+  margin-bottom: 15px;
+}
+.footer-links li a i {
+  font-size: 30px;
+  margin-right: 14px;
+}
+.left-footer-top {
+  padding: 90px 0px;
+}
+.footer-links .footer-li-heading a {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #e2e2e2;
+  margin-bottom: 28px;
+}
+.footer-links-padding {
+  padding: 90px 50px;
+}
+
+.footer-heading {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+.footer-sub-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #c2c2c2;
+  margin-bottom: 56px;
+}
+
+.right-footer-top input[type="email"] {
+  padding: 21px 32px;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border: 2px solid #c2c2c2;
+  border-radius: 30px;
+}
+.right-footer-top form {
+  position: relative;
+}
+.right-footer-top input[type="submit"] {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  transform: translateY(-50%);
+  background-color: #f8a501;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+}
+.right-footer-top input[type="email"]::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #c2c2c2;
+}
+.right-footer-top {
+  padding: 114px 43px 56px;
+}
+.right-footer-bottom {
+  padding: 34px 46px;
+}
+.right-footer-bottom p {
+  font-family: "Arca Majora Bold", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #e2e2e2;
+  margin-bottom: 50px;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.left-footer-bottom {
+  padding-top: 91px;
+}
